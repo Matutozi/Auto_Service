@@ -1,4 +1,3 @@
-**Repository Description**
 
 **Mechanic-Driver Connect**
 
@@ -41,4 +40,3 @@ Contributions welcome. Submit pull requests.
 
 **License:**
 
-[Insert your desired license]
