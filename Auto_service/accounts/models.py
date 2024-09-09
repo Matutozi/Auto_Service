@@ -18,7 +18,6 @@ class CustomUser(models.Model):
     
 class Address(models.Model):
     """Class that handles all information relating to address"""
-    
     custom_user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)  # Link to CustomUser
     street_address = models.CharField(max_length=255)
     city = models.CharField(max_length=100)
