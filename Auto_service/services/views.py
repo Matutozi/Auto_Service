@@ -13,4 +13,18 @@ def create_service_request(request):
             return HttpResponse("Error during service request")
     else:
         form = ServiceRequestForm()
-    return render(request, 'create_service_request.html', {'form': form})
+    return render(request, 'service.html', {'form': form})
+
+
+def scheduled_service(request):
+        return render(request, 'emergency_service.html')
+
+
+def emergency_services(request):
+    return render(request, "emergency_service.html")
+
+def custom_services(request):
+    return render(request, "custom_service.html")
+
+
+

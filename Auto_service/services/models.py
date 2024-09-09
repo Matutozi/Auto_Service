@@ -5,6 +5,11 @@ from drivers.models import Driver
 
 
 class ServiceRequest(models.Model):
+    SERVICE_TYPES = [
+        ("emergency", "Emergency"),
+        ("custom", "Custom"),
+        ("scheduled", "Scheduled"),
+    ]
     driver = models.ForeignKey(Driver, on_delete=models.CASCADE)
     mechanic = models.ForeignKey(Mechanic, null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()

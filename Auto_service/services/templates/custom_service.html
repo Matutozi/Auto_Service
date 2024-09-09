@@ -1,0 +1,22 @@
+<!-- custom_service.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Service Request</title>
+</head>
+
+<body>
+    <h1>Custom Service Request</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="description">Custom Service Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+
+        <button type="submit">Submit Custom Request</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!-- scheduled_service.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Service Request</title>
+</head>
+
+<body>
+    <h1>Scheduled Service Request</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="description">Description of Scheduled Service:</label>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+
+        <label for="scheduled_time">Select Scheduled Time:</label>
+        <input type="datetime-local" id="scheduled_time" name="scheduled_time" required>
+
+        <button type="submit">Submit Scheduled Request</button>
+    </form>
+</body>
+
+</html>
