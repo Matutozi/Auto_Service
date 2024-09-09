@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "accounts",
     "drivers",
     "mechanics",
+    "services",
 ]
 
 MIDDLEWARE = [
