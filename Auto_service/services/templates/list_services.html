@@ -1,0 +1,14 @@
+{% extends 'services/base.html' %}
+
+{% block title %}
+List of Service Requests
+{% endblock %}
+
+{% block content %}
+<h2>Service Requests</h2>
+<ul>
+    {% for service in services %}
+    <li>{{ service.description }} - {{ service.status }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
