@@ -6,45 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa; /* Light cyan background */
-            color: #00796b; /* Teal text color */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8; /* Light grey background */
+            color: #333; /* Dark text color for readability */
+            display: flex;
+            flex-direction: column;
             text-align: center;
         }
 
         .container {
-            max-width: 800px;
+            flex: 1;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
 
+        .hero {
+            background: url('path/to/hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 5px solid #00796b; /* Accent color */
+        }
+
         h1 {
-            color: #004d40; /* Darker teal for the heading */
+            font-size: 2.8em;
+            margin: 0;
         }
 
         p {
-            font-size: 18px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            margin: 20px 0;
         }
 
         a {
             display: inline-block;
             text-decoration: none;
             color: #ffffff;
-            background-color: #00796b; /* Teal background for buttons */
+            background-color: #00796b; /* Teal background */
             padding: 15px 25px;
             margin: 10px;
             border-radius: 5px;
             font-size: 18px;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
 
         a:hover {
-            background-color: #004d40; /* Darker teal on hover */
-            transform: scale(1.05); /* Slight zoom effect on hover */
+            background-color: #004d40; /* Darker teal */
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
         }
 
         .links {
@@ -52,19 +73,71 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+
+        .benefits {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .benefits h2 {
+            color: #00796b; /* Teal text color */
+            margin-bottom: 15px;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #00796b; /* Teal background */
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            border-top: 5px solid #004d40; /* Darker teal for top border */
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="hero">
         <h1>Welcome to Our Service</h1>
+    </div>
+
+    <div class="container">
         <p>Choose your role:</p>
         <div class="links">
             <a href="{% url 'driver_dashboard' %}">I am a Driver</a>
             <a href="{% url 'mechanic_dashboard' %}">I am a Mechanic</a>
             <a href="{% url 'create_service' %}">Request a Service</a>
         </div>
+
+        <div class="benefits">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Reliable and Professional Service</li>
+                <li>24/7 Support Available</li>
+                <li>Competitive Pricing and Quality</li>
+            </ul>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Ghebee & Co. <br> Contact Us</a></p>
+    </footer>
 </body>
 
 </html>
