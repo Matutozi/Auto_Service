@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Light cyan background */
+            color: #00796b; /* Teal text color */
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #004d40; /* Darker teal for the heading */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #00796b; /* Teal background for buttons */
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #004d40; /* Darker teal on hover */
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Our Service</h1>
+        <p>Choose your role:</p>
+        <div class="links">
+            <a href="{% url 'driver_dashboard' %}">I am a Driver</a>
+            <a href="{% url 'mechanic_dashboard' %}">I am a Mechanic</a>
+            <a href="{% url 'create_service' %}">Request a Service</a>
+        </div>
+    </div>
+</body>
+
+</html>
