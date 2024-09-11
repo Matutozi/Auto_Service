@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Driver Login</h1>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <form method="POST" action="{% url 'driver_login' %}">
+                {% csrf_token %}
+                <h2>Login</h2>
+
+                <!-- Display any form errors -->
+                {% if form.errors %}
+                    <div class="error">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <!-- Email field -->
+                <div class="form-group">
+                    {{ form.username.label_tag }}<br>
+                    {{ form.username }}<br>
+                    {% if form.username.errors %}
+                        <div class="error">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <!-- Password field -->
+                <div class="form-group">
+                    {{ form.password.label_tag }}<br>
+                    {{ form.password }}<br>
+                    {% if form.password.errors %}
+                        <div class="error">{{ form.password.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section>
+            <p>Don't have an account? <a href="{% url 'driver_register' %}">Register here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Auto Service</p>
+    </footer>
+</body>
+</html>

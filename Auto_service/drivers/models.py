@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Driver(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=40, default="unknown")
+    last_name = models.CharField(max_length=40, default="unknown")
+
     vehicle_make = models.CharField(max_length=100)
     vehicle_model = models.CharField(max_length=100)
     vehicle_year = models.PositiveIntegerField()
