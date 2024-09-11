@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        .header {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 20px;
+            width: 250px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #00796b;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            color: #00796b;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .logout {
+            background-color: #ff5722;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .logout:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            background-color: #004d40;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Driver Dashboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <a href="#">My Profile</a>
+            <a href="#">View Service Requests</a>
+            <a href="#">Request a Service</a>
+            <a href="#">Service History</a>
+            <a href="#">Help & Support</a>
+            <a href="{% url 'logout' %}" class="logout">Logout</a>
+        </div>
+
+        <div class="main-content">
+            <h2>Welcome, Driver!</h2>
+            <div class="card">
+                <h3>Your Active Service Requests</h3>
+                <p>You currently have 2 active service requests.</p>
+            </div>
+
+            <div class="card">
+                <h3>Upcoming Maintenance</h3>
+                <p>Your next scheduled maintenance is on 20th September, 2024.</p>
+            </div>
+
+            <div class="card">
+                <h3>Recent Service History</h3>
+                <p>You completed a tire replacement on 15th August, 2024.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ghebee & Co. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

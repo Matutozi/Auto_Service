@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #105c88;
     color: #333;
 }
 
@@ -9,7 +9,7 @@ h1 {
 }
 
 form {
-    background: #fff;
+    background: #105c88;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -26,4 +26,17 @@ button {
 
 button:hover {
     background-color: aqua;
+}
+
+main {
+    background-color: #105c88; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin: 20px auto; 
+    max-width: 1200px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+body{
+background-color: #105c88;
 }

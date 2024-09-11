@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def mechanic_dashboard(request):
+    return render(request, 'mechanic_dashboard.html')

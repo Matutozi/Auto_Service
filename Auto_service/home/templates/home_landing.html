@@ -14,8 +14,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f4f8; /* Light grey background */
-            color: #333; /* Dark text color for readability */
+            background-color: #f0f4f8;
+            color: #333;
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -37,12 +37,13 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            border-bottom: 5px solid #00796b; /* Accent color */
+            border-bottom: 5px solid #00796b;
         }
 
         h1 {
             font-size: 2.8em;
             margin: 0;
+            color: #FF5722; /* Changed heading color to orange */
         }
 
         p {
@@ -54,7 +55,7 @@
             display: inline-block;
             text-decoration: none;
             color: #ffffff;
-            background-color: #00796b; /* Teal background */
+            background-color: #00796b;
             padding: 15px 25px;
             margin: 10px;
             border-radius: 5px;
@@ -63,9 +64,9 @@
         }
 
         a:hover {
-            background-color: #004d40; /* Darker teal */
+            background-color: #004d40;
             transform: scale(1.05);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .links {
@@ -83,7 +84,7 @@
         }
 
         .benefits h2 {
-            color: #00796b; /* Teal text color */
+            color: #00796b;
             margin-bottom: 15px;
         }
 
@@ -98,11 +99,11 @@
         }
 
         footer {
-            background-color: #00796b; /* Teal background */
+            background-color: #00796b;
             color: #ffffff;
             padding: 15px;
             text-align: center;
-            border-top: 5px solid #004d40; /* Darker teal for top border */
+            border-top: 5px solid #004d40;
         }
 
         footer a {
@@ -122,7 +123,6 @@
         <div class="links">
             <a href="{% url 'driver_dashboard' %}">I am a Driver</a>
             <a href="{% url 'mechanic_dashboard' %}">I am a Mechanic</a>
-            <a href="{% url 'create_service' %}">Request a Service</a>
         </div>
 
         <div class="benefits">
@@ -136,7 +136,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Ghebee & Co. <br> Contact Us</a></p>
+        <p>&copy; 2024 Ghebee & Co. <br>Contact Us</a></p>
     </footer>
 </body>
 

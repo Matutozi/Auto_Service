@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanic Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #004d40;
+        }
+
+        .header {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 20px;
+            width: 250px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #00796b;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            color: #00796b;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #00796b;
+        }
+
+        .card p {
+            margin: 0;
+            color: #333;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Mechanic Dashboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <a href="#">My Profile</a>
+            <a href="#">View Assigned Services</a>
+            <a href="#">Service History</a>
+            <a href="#">Manage Availability</a>
+            <a href="#">Help & Support</a>
+            
+        </div>
+
+        <div class="main-content">
+            <h2>Welcome, Mechanic!</h2>
+            <div class="card">
+                <h3>Active Service Requests</h3>
+                <p>You have 3 new service requests awaiting your attention.</p>
+            </div>
+
+            <div class="card">
+                <h3>Upcoming Appointments</h3>
+                <p>Your next service appointment is on 21st September, 2024.</p>
+            </div>
+
+            <div class="card">
+                <h3>Service History</h3>
+                <p>You successfully completed a tire replacement service on 10th September, 2024.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ghebee & Co. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
