@@ -32,7 +32,6 @@ from django.contrib import messages
 from .forms import LoginForm
 
 def login_view(request):
-    next_url = request.GET.get('next', 'home_landing')
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -57,5 +56,5 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('home_Landing')
+    return redirect('home_landing')
 
