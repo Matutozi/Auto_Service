@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from accounts.forms import LoginForm
+from accounts.forms import LoginForm, CustomUserCreationForm # type: ignore
 
 
 def mechanic_login(request):
@@ -19,6 +19,17 @@ def mechanic_login(request):
     else:
         form = LoginForm()
     return render(request, 'mechanic_login.html', {'form': form})
+
+def register_mechanic(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('mechanic_login')
+    else:
+        form = CustomUserCreationForm()
+    
+    return render(request, 'mechanic_register.html', {'form': form})
 
 def mechanic_dashboard(request):
     return render(request, 'mechanic_dashboard.html')
