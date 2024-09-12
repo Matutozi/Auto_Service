@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>Driver profile</h1>
+
+<p>Username: {{ profile_info.user.username }}</p>
+<p>Vehicle Make: {{ profile_info.vehicle_make }}</p>
+<p>Vehicle Model: {{ profile_info.vehicle_model }}</p>
+<p>Vehicle Year: {{ profile_info.vehicle_year }}</p>
+<p>Rating: {{ profile_info.rating }}</p>
+
+
+{% endblock %}

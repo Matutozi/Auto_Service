@@ -7,5 +7,6 @@ urlpatterns = [
     path('login', views.driver_login, name='driver_login'),
     path('register', views.driver_register, name='driver_register'),
     path('logout/', LogoutView.as_view(), name='logout'),  # Logout route
+    path("profile/",views.driver_profile, name="driver_profile" )
 
 ]

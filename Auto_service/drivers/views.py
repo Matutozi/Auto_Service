@@ -3,7 +3,7 @@ from django.contrib.auth import login
 from .forms import UserRegisterForm, DriverRegisterForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
-
+from .models import Driver
 
 @login_required
 def driver_dashboard(request):
@@ -48,3 +48,9 @@ def driver_register(request):
         driver_form = DriverRegisterForm()
 
     return render(request, 'driver_register.html', {'user_form': user_form, 'driver_form': driver_form})
+
+
+def driver_profile(request):
+    driver = Driver.objects.get(user=request.user)
+
+    return render(request, "driver_profile.html", {"profile_info": driver})
